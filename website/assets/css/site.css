@@ -1187,4 +1187,66 @@ ul.checklist li::before{
   .hero-load>*,.hero-figure{animation:none;opacity:1;transform:none}
   .sticky-cta{transition:none}
 }
-@media print{.header,.footer,.cta-band,.sticky-cta{display:none}body{background:#fff}}
+/* ==========================================================================
+   Mobile refinements
+   Layout already reflows correctly; what needed work was touch ergonomics.
+   Anything a finger has to hit gets to ~44px, and any input a phone can zoom
+   into gets 16px text. Desktop is untouched.
+   ========================================================================== */
+@media (max-width:760px){
+
+  /* Footer links were 18px tall — the hardest targets on the site. */
+  .footer li{margin-bottom:2px}
+  .footer li a{display:inline-block;padding:11px 0;min-height:44px}
+  .footer-bottom a{display:inline-block;padding:12px 0;min-height:44px}
+  .footer-bottom{gap:4px 20px}
+
+  /* Header logo is a link home — it needs a finger-sized hit area too. */
+  .brand{min-height:44px;display:flex;align-items:center}
+
+  /* Close control on the assistant sheet. */
+  .bot-close{width:44px;height:44px;display:grid;place-items:center;margin-right:-8px}
+
+  /* Standalone arrow links are calls to action, not inline prose. */
+  .link-arrow{padding-top:10px;padding-bottom:10px}
+
+  /* Chart controls */
+  .c-key{min-height:44px;padding-inline:4px}
+  .c-table-toggle{min-height:44px;display:inline-flex;align-items:center}
+
+  /* FAQ category jump chips */
+  .jump a{padding:13px 18px}
+
+  /* Calculator: a 22px slider is fiddly; give the whole control a finger's
+     worth of height and keep the thumb centred on the track. */
+  .calc input[type=range]{height:44px}
+  .calc input[type=range]::-webkit-slider-thumb{width:26px;height:26px;margin-top:-11px}
+  .calc input[type=range]::-moz-range-thumb{width:26px;height:26px}
+
+  /* Forms — 16px minimum stops iOS zooming the page on focus. */
+  .field input,.field select,.field textarea,.bot-form input{font-size:16px}
+  .check{padding:8px 0}
+  .check input{width:22px;height:22px}
+  .form-steps{font-size:.68rem}
+
+  /* Accordion summaries already clear 44px, but give the marker room. */
+  .acc summary{padding-right:52px}
+
+  /* Assistant: full-height sheet, and it steps aside for the sticky CTA. */
+  .bot-launch{font-size:.88rem}
+  .bot-msg{max-width:92%}
+  .bot-chip{padding:10px 14px;min-height:44px;display:inline-flex;align-items:center}
+}
+
+/* Very small phones: the hero headline and section padding get tighter still. */
+@media (max-width:380px){
+  .wrap,.wrap-narrow{padding-inline:18px}
+  .hero h1{font-size:clamp(1.95rem,8.5vw,2.4rem)}
+  .btn-lg{padding:16px 22px;font-size:.96rem}
+  .btn-row{gap:10px}
+  .btn-row .btn{width:100%}
+  .stat-float .n{font-size:1.5rem}
+  .calc-value{font-size:1.5rem}
+}
+
+@media print{.header,.footer,.cta-band,.sticky-cta,.bot-launch,.bot-panel{display:none}body{background:#fff}}
