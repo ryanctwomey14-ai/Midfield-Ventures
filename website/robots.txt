@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Gated and template pages are excluded deliberately. Offering specifics must
+# not appear on a public URL — see website/README.md, compliance section.
+Disallow: /offerings.html
+Disallow: /property-template.html
+
+Sitemap: https://www.midfieldventures.com/sitemap.xml
