@@ -25,6 +25,7 @@ def asset_version():
     return str(int(max(f.stat().st_mtime for f in files if f.exists())))
 
 NAV = [
+    ("index.html", "Home"),
     ("approach.html", "Our approach"),
     ("how-it-works.html", "How investing works"),
     ("about.html", "About us"),
