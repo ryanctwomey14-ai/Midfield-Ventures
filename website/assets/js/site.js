@@ -362,8 +362,8 @@
         status.querySelector('[data-branch]').textContent = wantsCall
           ? 'Tim or Kim will email you within one business day to find a time that works. If it is urgent, call us directly.'
           : isAccredited
-            ? 'Watch for an email from Tim or Kim within one business day to set up a short introductory call.'
-            : 'We have added you to the education list. We will send the primer and let you know when an offering opens that fits.';
+            ? 'Watch for an email from Tim or Kim within one business day to confirm a time for your call.'
+            : 'Tim or Kim will email you within one business day to set up your consultation. We will start with what accreditation means and whether it applies to you.';
         status.focus();
       }, 700);
     });

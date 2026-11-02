@@ -15,7 +15,7 @@ window.MIDFIELD_KB = [
   },
   {
     "q": "What if I am not accredited?",
-    "a": "Join the education list anyway. You will receive the primer and our market notes, and we will let you know if an offering opens that you can participate in. Plenty of our partners spent a year on that list first."
+    "a": "Book a call anyway. We will walk through what accreditation means and whether it applies to you, and we will let you know if an offering opens that you can participate in."
   },
   {
     "q": "How is this different from buying a REIT?",
@@ -78,8 +78,8 @@ window.MIDFIELD_KB = [
     "a": "Common and workable through a self-directed custodian. The catch is UBIT: debt-financed income inside a retirement account can be taxable. It is often still worth doing &mdash; check with your CPA first."
   },
   {
-    "q": "What happens after I request the packet?",
-    "a": "You receive the investor primer, our acquisition criteria and a sample quarterly report. If you asked for a call, Tim or Kim reaches out within a business day. If you did not, nobody calls you."
+    "q": "What happens after I book a call?",
+    "a": "Tim or Kim emails you within one business day to confirm a time. The call is twenty minutes, by phone or video, and covers your goals, how our deals are structured and whether we are a fit. Nothing is committed, and nobody follows up unless you ask."
   },
   {
     "q": "How are allocations decided when a deal opens?",

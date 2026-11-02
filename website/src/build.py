@@ -87,12 +87,12 @@ SHELL = """<!doctype html>
     <nav class="nav" id="nav" aria-label="Main">
 {nav}
       <div class="m-cta">
-        <a class="btn btn-primary" href="invest.html">Learn more</a>
+        <a class="btn btn-primary" href="invest.html">Book a call</a>
       </div>
     </nav>
 
     <div class="header-cta">
-      <a class="btn btn-primary" href="invest.html">Learn more</a>
+      <a class="btn btn-primary" href="invest.html">Book a call</a>
     </div>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span></button>
@@ -136,7 +136,7 @@ SHELL = """<!doctype html>
           <li><a href="approach.html">Our approach</a></li>
           <li><a href="offerings.html">Current offerings</a></li>
           <li><a href="how-it-works.html">How investing works</a></li>
-          <li><a href="invest.html">Learn more</a></li>
+          <li><a href="invest.html">Book a call</a></li>
         </ul>
       </div>
       <div>
@@ -151,7 +151,7 @@ SHELL = """<!doctype html>
         <h5>Contact</h5>
         <ul>
           <li><a href="contact.html">Contact us</a></li>
-          <li><a href="schedule.html">Book a call</a></li>
+          <li><a href="schedule.html">Pick a time</a></li>
           <li><a href="mailto:invest@midfieldventures.com">invest@midfieldventures.com</a></li>
           <li><a href="tel:+19714473412">971-447-3412</a></li>
         </ul>
@@ -207,7 +207,7 @@ def build(path):
         body=body,
         head_extra=head_extra,
         sticky_href=meta.get("sticky_href", "invest.html"),
-        sticky_label=meta.get("sticky_label", "Learn more"),
+        sticky_label=meta.get("sticky_label", "Book a call"),
     )
     (ROOT / slug).write_text(out, encoding="utf-8")
     print("built", slug, len(out), "bytes")
