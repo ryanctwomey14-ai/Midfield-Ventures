@@ -279,6 +279,11 @@ section:has(> .wrap > .split-tight){padding-block:clamp(40px,5vw,64px)}
 .hero-sm{min-height:0;display:block}
 .hero-sm .hero-in{padding-block:clamp(48px,6vw,80px)}
 .hero-sm h1{max-width:22ch;font-size:clamp(2.1rem,4.2vw,3.1rem)}
+/* Plain, compact page header: solid brand navy, no stripes or gradient. */
+.hero-plain{background:var(--navy-700);padding-block:0}
+.hero-plain::before,.hero-plain::after,.hero-plain .hero-bg{display:none}
+.hero-plain .hero-in{padding-block:clamp(44px,5vw,64px)}
+.hero-plain .lede{margin-bottom:0}
 
 /* Floating stat row — the premium device from the references. Pulled up over
    the hero so the proof numbers are the first thing scrolling reveals, and
@@ -469,6 +474,12 @@ section:has(> .wrap > .split-tight){padding-block:clamp(40px,5vw,64px)}
 .cta-band{background:var(--navy-800);color:#fff;position:relative;overflow:hidden}
 .cta-band::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 84px,rgba(255,255,255,.05) 84px 85px)}
 .cta-band .wrap,.cta-band .wrap-narrow{position:relative;z-index:1}
+/* Faded brand emblem bleeding off the right edge, for a band that needs a little more weight. */
+.cta-band.has-emblem::after{content:"";position:absolute;right:-6%;top:50%;width:min(620px,70vw);aspect-ratio:1;transform:translateY(-42%);
+  background:url(../img/emblem-circle-1280.webp) center/contain no-repeat;opacity:.09;pointer-events:none;
+  -webkit-mask-image:radial-gradient(circle at 40% 45%,#000 35%,transparent 72%);mask-image:radial-gradient(circle at 40% 45%,#000 35%,transparent 72%)}
+.cta-band.has-emblem::before{display:none}
+@media (max-width:700px){.cta-band.has-emblem::after{right:-30%;width:110vw;opacity:.07}}
 .cta-band h2{color:#fff}
 .cta-band p{color:var(--slate-200)}
 
